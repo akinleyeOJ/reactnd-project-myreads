@@ -4,6 +4,7 @@ import {update} from "../BooksAPI";
 
 export class Book extends Component {
   handleChange = async e => {
+    e.persist();
     try {
      const shelf = e.target.value;
      const book = this.props
@@ -30,7 +31,7 @@ export class Book extends Component {
                   </div>
                 </div>
                 <div className="book-title">{this.props.title}</div>
-                <div className="book-authors">{this.props.authors ? this.props.authors[0] : "No Author"}</div>
+                <div className="book-authors">{this.props.authors ? this.props.authors[0] : "No Known Author"}</div>
               </div>
             </li>
     );
