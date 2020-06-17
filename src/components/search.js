@@ -13,6 +13,7 @@ export class Search extends Component {
   handleChange = async e => {
     try {
    const query = e.target.value
+   this.setState({query})
    const results = await search(query)
    console.log(results)
     }catch(error) {
