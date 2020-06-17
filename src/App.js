@@ -3,7 +3,7 @@ import React from 'react'
 import './App.css'
 import {Switch, Route} from "react-router-dom";
 import Home from './components/Home';
-import Search from './components/search';
+import Search from './components/Search';
 import BookShelf from './components/BookShelf';
 import FavoriteBook from './components/FavoriteBook';
 import Provider, {MyContext} from './Provider';
