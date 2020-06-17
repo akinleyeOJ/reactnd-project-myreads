@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import BookShelf from './components/BookShelf';
-import FavoriteBook from './components/FavoriteBook';
+import BookShelf from './BookShelf';
+import FavoriteBook from './FavoriteBook';
 
 export class Home extends Component {
     render() {
