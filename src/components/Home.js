@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
 import BookShelf from './BookShelf';
 import FavoriteBook from './FavoriteBook';
+import { getAll } from "../BooksAPI";
 
 export class Home extends Component {
+    async componentDidMount(){
+     try {
+      const books = await getAll(); 
+      console.log(books);
+        } catch(error) {
+        console.log(error)
+       }
+    }
     render() {
         return (
             <div className="list-books">
@@ -10,7 +19,9 @@ export class Home extends Component {
               <h1>MyReads</h1>
             </div>
             <div className="list-books-content">
-              <BookShelf />
+              <BookShelf title="Currently Reading"/>
+              <BookShelf title="Want To Read"/>
+              <BookShelf title="Read"/>
             </div>
             <FavoriteBook />
           </div>
