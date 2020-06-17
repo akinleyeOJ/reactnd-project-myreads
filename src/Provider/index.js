@@ -11,7 +11,12 @@ export class index extends Component {
          wantToRead: [],
          read: [],
          addBooks: books => {
-           
+            const currentlyReading = books.filter(
+                book => book.shelf === "currentlyReading"
+            );
+            const read = books.filter(book => book.shelf === "read");
+            const wantToRead = books.filter(book => book.shelf === "wantToRead");
+            this.setState({books, currentlyReading, read, wantToRead})
          }
 
     }
